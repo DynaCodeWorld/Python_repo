@@ -1,5 +1,7 @@
 print("{**WELCOME TO MY BANK ATM **}")
-print("{**WELCOME TO MY BANK AT*****M **}")
+print("")
+print("-----------------------------------------------------------")
+
 class Detail():
     def __init__(self,name ,age,adress):
         self.name=name
@@ -19,33 +21,34 @@ class Bank(Detail):
         self.userdetails()
         deposit=int(input("*Enter deposit amount ==  "))
         self.amount=self.amount+deposit
-        print(f"amount amount is {self.amount}")
+        print(f"Total amount after deposit {self.amount}")
     def withdrow(self):
         withdrw=int(input("**Enter withdrw amount == "))
         self.amount=self.amount-withdrw
-        print(f"amount amount is {self.amount}")
-b=Bank("Rudra",27,"Nimapur",0)
-
+        print(f"Total amount after withdrow {self.amount}")
 class final(Bank):
    
         def f(self):
              self.userdetails()
              while True:
-                print("""choose any      
+                print("""choose any  for    
                                         deposit = 1
                                         withdrow = 2
                                         totalamount =3""")
-                ch=int(input("choise here :: "))
+                choice=int(input("choise here :: "))
              
-                if ch==1:
-                    print('youchoose deposit')
+                if choice==1:
+                    print('you want deposit')
                     self.deposit()
-                elif ch==2:
-                    print('youchoose withdrow')
+                    print("----------------------------------------------")
+                elif choice==2:
+                    print('you want withdrow')
                     self.withdrow()
-                elif ch==3:
-                    print("you choose total amount")
-                    print(f"amount  is :: {self.amount}")
+                    print("---------------------------------------------------------")
+                elif choice==3:
+                    print("you want total amount")
+                    print(f"Total avelable amount   :: {self.amount}")
+                    print("---------------------------------------------------------")
                 else:
                     print("Thank for visit our ATM")
                     break
@@ -57,6 +60,7 @@ age=int(input("Enter yout age ::  "))
 adress=input("Enter yout adress ::  ")
 
 f=final(name,age,adress,1000)
+print("-------------------------------------------------------")
 f.f()
         
 
